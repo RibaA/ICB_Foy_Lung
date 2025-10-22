@@ -7,7 +7,7 @@ library(stringr)
 
 source_location <- "https://raw.githubusercontent.com/BHKLAB-Pachyderm/ICB_Common/main"
 # source_location <- "~/Documents/GitHub/Pachyderm/PredictIO_ICB/ICB_Common"
-load("C:/ICB_Foy_HNSCC/data/output/Gencode.v40.annotation.RData")
+load("C:/ICB_Foy_Lung/data/output/Gencode.v40.annotation.RData")
 
 get_MultiAssayExp <- function(study, input_dir, expr_with_counts_isoforms=FALSE){ 
   source(paste(source_location, "code", "CNA_Functions.R", sep = "/"))
@@ -67,3 +67,4 @@ get_MultiAssayExp <- function(study, input_dir, expr_with_counts_isoforms=FALSE)
 
 dat <- get_MultiAssayExp(study = "Foy_Lung", output_dir, expr_with_counts_isoforms=FALSE)
 saveRDS(dat, file=file.path(output_dir, "ICB_Foy_Lung.rds"))
+
