@@ -32,6 +32,7 @@ clin$drug_type <- 'PD-1/PD-L1'
 clin$rna <- 'rnaseq'
 clin$rna.info <- 'tpm'
 clin$primary <- 'Lung'
+clin$sex <- ifelse(clin$sex == 'Male', 'M', 'F')
 
 clin$response = Get_Response( data=clin )
 
